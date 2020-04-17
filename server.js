@@ -45,6 +45,10 @@ const lookupRouter = require('./routes/lookup');
 app.use('/lookup', lookupRouter);
 //app.use('/historical', historicalRouter);
 
+app.get('/', function(req, res, next) {
+  res.send("Hello World!");
+});
+
 // App Listen!
 
 app.listen(port, () => {
